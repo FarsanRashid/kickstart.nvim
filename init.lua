@@ -303,6 +303,11 @@ require('lazy').setup({
     'coder/claudecode.nvim',
     dependencies = { 'folke/snacks.nvim' },
     config = true,
+    opts = {
+      terminal = {
+        split_width_percentage = 0.40,
+      },
+    },
     keys = {
       { '<leader>a', nil, desc = 'AI/Claude Code' },
       { '<leader>ac', '<cmd>ClaudeCode<cr>', desc = 'Toggle Claude' },
