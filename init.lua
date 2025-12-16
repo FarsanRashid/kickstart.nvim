@@ -291,6 +291,7 @@ require('lazy').setup({
     'nvim-tree/nvim-tree.lua',
     version = '*',
     lazy = false,
+    keys = { { '<leader>nt', '<cmd>NvimTreeToggle<cr>' }, desc = 'Toggle NvimTree' },
     dependencies = {
       'nvim-tree/nvim-web-devicons',
     },
