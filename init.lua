@@ -713,6 +713,9 @@ require('lazy').setup({
       -- Use metals using nvim-lspconfig only
       vim.lsp.enable 'metals'
 
+      -- Golang LSP
+      vim.lsp.enable 'gopls'
+
       -- Enable the following language servers
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
       --
