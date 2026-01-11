@@ -49,6 +49,8 @@ return {
         map('n', '<leader>hp', gitsigns.preview_hunk, { desc = 'git [p]review hunk' })
         map('n', '<leader>hb', gitsigns.blame_line, { desc = 'git [b]lame line' })
         map('n', '<leader>hd', gitsigns.diffthis, { desc = 'git [d]iff against index' })
+        map('n', '<leader>hl', gitsigns.setloclist, { desc = 'git open the [l]ocation list with hunks' })
+        map('n', '<leader>hq', function() gitsigns.setqflist('all') end, { desc = 'git open the [q]uickfix list with hunks' })
         map('n', '<leader>hD', function()
           gitsigns.diffthis '@'
         end, { desc = 'git [D]iff against last commit' })
