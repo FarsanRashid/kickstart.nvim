@@ -763,6 +763,10 @@ require('lazy').setup({
             },
           },
         },
+        gitlab_ci_ls = {},
+        -- Has a known bug where diagnostics show missing stage warning. Resolves on buffer write.
+        -- check https://github.com/alesbrelih/gitlab-ci-ls/issues/387 and https://github.com/alesbrelih/gitlab-ci-ls/issues/394
+        -- Might need to set up root_files (README.md)
       }
 
       -- Ensure the servers and tools above are installed
@@ -1076,6 +1080,12 @@ require('lazy').setup({
     },
   },
 })
+
+vim.filetype.add {
+  pattern = {
+    ['.*%.gitlab%-ci%.ya?ml'] = 'yaml.gitlab',
+  },
+}
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
