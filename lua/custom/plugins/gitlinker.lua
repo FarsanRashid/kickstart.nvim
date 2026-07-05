@@ -33,7 +33,4 @@ return {
       },
     }
   end,
-  keys = {
-    { '<leader>gl', '<cmd>GitLink!<cr>', mode = { 'n', 'v' }, desc = 'Open git link' },
-  },
 }
